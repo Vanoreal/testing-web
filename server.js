@@ -10,7 +10,7 @@ const db = require('./db');
 
 const app = express();
 app.use(express.json());
-app.use(express.static('public')); // taruh vanoprojek.html di folder ./public agar bisa dibuka via http://localhost:3000/vanoprojek.html
+app.use(express.static(__dirname)); // taruh vanoprojek.html di folder ./public agar bisa dibuka via http://localhost:3000/vanoprojek.html
 app.use(cookieSession({
   name: 'session',
   keys: ['GANTI_INI_DENGAN_STRING_RAHASIA_ACAK'], // ganti sebelum dipakai serius
